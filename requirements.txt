@@ -1,0 +1,14 @@
+# Base environment used before visualize_umap.py was added.
+# Tested with Python 3.10.8 and CUDA 12.1.
+numpy==1.26.3
+pandas==2.3.3
+scipy==1.15.3
+scikit-learn==1.7.2
+iterative-stratification==0.1.9
+joblib==1.6.0
+networkx==3.2.1
+matplotlib==3.8.2
+shap==0.49.1
+torch==2.1.0
+dgl>=2.1.0,<3.0
+fair-esm==2.0.0
