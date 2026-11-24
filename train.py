@@ -156,7 +156,7 @@ def parse_binary_args():
                    help='Explicit graph checkpoint for --mode test.')
     p.add_argument('--seed',type=int,choices=[5],default=5,
                    help='Fixed training seed; only seed 5 is supported.')
-    p.add_argument('--epochs',type=int,default=100)
+    p.add_argument('--epochs',type=int,default=300)
     p.add_argument('--batch_size',type=int,default=512,
                    help='Effective global batch size after gradient accumulation.')
     p.add_argument('--micro_batch_size',type=int,default=512,
@@ -1107,7 +1107,7 @@ def train_registered_dataset(
     data = Path(spec["data"]).resolve()
     key = dataset_key(data)
     if spec["task"] == "binary":
-        epochs = 100 if epochs is None else epochs
+        epochs = 300 if epochs is None else epochs
         batch_size = 512 if batch_size is None else batch_size
         checkpoint = (
             ROOT / "models/two_branch/graph/binary" / f"{key}_seed5.pt")
